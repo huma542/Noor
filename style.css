@@ -1,0 +1,197 @@
+ /* 1. CSS VARIABLES - The "Noor" Palette */
+:root {
+  --bg-color: #f7f3f2;       /* stone */
+  --bg-alt:#ffffff;  /*pure white for card section*/
+  --text-primary:#2c2422;   /* near black */
+  --text-secondary: #5e6e5f;/*for sub-text*/
+  --accent-color:#7a5650;
+  --accent-hover: #5c403a ;   /* main accent */
+  
+  --border-light:#eae2e0;
+  --nav-font: 'Montserrat', sans-serif;
+  --header-font: 'Playfair Display', serif; 
+}
+
+
+/* 2. GENERAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* 3. HEADER & NAV */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
+  height: 10vh;
+  position: sticky;
+  position:-webkit-sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bg-color);
+  width: 100%;
+  
+}
+
+.logo {
+  font-family: var(--header-font);
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  letter-spacing: 6px;
+  font-weight: 400;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2c2c2c;
+  font-family: var(--nav-font);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition:  0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-hover);
+
+}
+
+
+/* 4. HERO SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-image: url('images/hero-image.png'); 
+  background-size: cover;
+  background-position:  25% center;
+  background-repeat: no-repeat;
+  background-color:  var(--bg-color);
+  height: 50vh;
+  min-height: 450px; 
+  padding-right: 6%;
+  padding-left: 0;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.hero-content {
+ background: rgba(247, 246, 242, 0.9);
+  box-shadow: rgba(255, 255, 255, 0.6);
+  padding: 3rem 4rem;
+  max-width: 380px;
+  border: 1px solid var(--border-light);
+}
+
+.hero-eyebrow {
+  display: block;
+  font-family: var(--nav-font);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 3.5px;
+  margin-bottom: 1.25rem;
+  color:var(--text-secondary) ;
+  font-weight: 600;
+}
+
+.hero-content h1 {
+  font-family: var(--header-font);
+  font-size: clamp(3rem, 5vw, 4.5rem); /* Fluid typography */
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.6);
+}
+
+.hero-content p {
+  font-family: var(--nav-font);
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+}
+
+/* 5. THE BUTTON */
+.cta-button {
+  display: inline-block;
+  padding: 1rem 1rem;
+  background-color: var(--accent-color);
+  color: var(--bg-alt);
+  text-decoration: none;
+  font-family: var(--nav-font);
+  font-size: 0.8rem;
+  font-weight: 900; 
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.4s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+/*features section*/
+.features{
+   background-color: var(--bg-alt);
+  color: var(--text-primary);
+  padding: 6rem 2.5rem;
+  border-top: 1px solid var(--border-light);
+}
+.features-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+
+}
+.feature{
+  flex: 1;
+  padding: 0 1rem;
+}
+.feature h3{
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+.feature p{
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+ /* max-width: 240px;*/
+  margin: 0 auto;
+}
+.feature-icon svg{
+/*color: var(--text-secondary);*/
+stroke: #5e6e5f;
+width: 36px;
+height: 36px;
+stroke-width: 2 ;
+margin-bottom: 1.25rem;
+transition: color 0.3s ease, transform 0.3s ease;
+}
+.feature:hover .feature-icon svg {
+  stroke: #7a5650;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
